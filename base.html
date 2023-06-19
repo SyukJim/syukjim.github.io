@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="static/prism.css">
+    <script src="javascript/prism.js"></script>
+
+    <style>
+        .custom-offcanvas {
+            width: 800px;
+        }
+    </style>
+
+    <title>Home</title>
+</head>
+<body>
+
+    <br>
+
+    <div class="container">
+        <div class="col-md-8 mx-auto">
+            <h1>About</h1>
+            <br>
+
+            <!-- introduction -->
+            <h3>Introduction</h3>
+            <br>
+            <p>I am Syukri Haji Ahmad, currently a third-year bachelor student attending University Brunei Darussalam, majoring in Computer Science under the faculty of the School of Digital Science.</p>
+            <br>
+            <hr>
+            <!-- project -->
+            <h3>Project</h3>
+            <br>
+            <h4>Semi Automatic Data Sorter</h4>
+            <br>
+            <p>
+                This project was completed during my internship at the Brunei Darussalam Meteorological Department in early 2023. 
+                The objective of the task was to organize the climate data, including rainfall, mean temperature, and minimum and maximum temperature of Brunei Darussalam, 
+                into a more accessible format for analysis. To accomplish this, I developed a simple Python code that significantly expedited the data sorting process.
+            </p>
+
+            <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#ytdownloader" role="button" aria-controls="ytdownloader">
+                code
+            </a>
+            <br><br>
+            <h4>Youtube Video Downloader</h4> <br>
+            <p>
+                This project was completed when I was practicing and trying to understand on how to use Tkinter (Python Library) that allow the use of Graphical User Interface (GUI). 
+                This project also use a library called Pytube.
+            </p>
+
+            <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#ytdownloader" role="button" aria-controls="ytdownloader">
+                code
+            </a>
+            
+            <div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="ytdownloader" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Code for Youtube downloader</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    This is the example code without using Tkinter. This was used to test the downloading functionality of Pytube.
+                    <br>
+                    <div class="container">
+                        <pre><code class="language-python">
+from pytube import YouTube
+
+def download_video(url):
+    yt = YouTube(url)
+    
+    # Check if 1080p resolution is available
+    if "1080p" in yt.streams.filter(progressive=True).order_by("resolution").desc().first().resolution:
+        stream = yt.streams.filter(progressive=True, resolution="1080p").first()
+    else:
+        stream = yt.streams.get_highest_resolution()
+    
+    # Download the video
+    stream.download(output_path="save path here")
+
+video_url = "youtube link here"
+download_video(video_url)
+                            
+                        </code></pre>
+
+                        <br>
+
+                        Code below will use Tkinter to download Youtube video.
+                        <pre><code class="language-python">
+import tkinter as tk
+from pytube import YouTube
+from tkinter import ttk
+from PIL import Image, ImageTk
+from io import BytesIO
+import requests
+
+def show_video_details():
+    video_url = entry.get()
+    try:
+        yt = YouTube(video_url)
+        title_label.config(text="Title: " + yt.title)
+        
+        thumbnail_url = yt.thumbnail_url
+        response = requests.get(thumbnail_url)
+        image = Image.open(BytesIO(response.content))
+        image = image.resize((200, 150))
+        thumbnail = ImageTk.PhotoImage(image)
+        thumbnail_label.config(image=thumbnail)
+        thumbnail_label.image = thumbnail
+
+    except Exception as e:
+        title_label.config(text="Error: " + str(e))
+        thumbnail_label.config(image="")
+
+def download_video():
+    video_url = entry.get()
+    resolution = resolution_var.get()
+    try:
+        yt = YouTube(video_url)
+        title = yt.title
+        streams = yt.streams.filter(res=resolution, progressive=True, mime_type='video/mp4')
+        if streams:
+            stream = streams.first()
+            filename = title + '.' + stream.subtype
+            stream.download(output_path="download path here", filename=filename)
+            status_label.config(text="Download completed!")
+        else:
+            status_label.config(text="No suitable video stream found for the selected resolution.")
+    except Exception as e:
+        status_label.config(text="Error occurred: " + str(e))
+
+def clear_entry():
+    entry.delete(0, tk.END)
+    title_label.config(text="")
+    thumbnail_label.config(image="")
+
+def paste_from_clipboard():
+    entry.delete(0, tk.END)
+    entry.insert(tk.END, window.clipboard_get())
+
+# Create the main window
+window = tk.Tk()
+window.title("YouTube Video Downloader")
+
+# Create labels and entry field
+label = tk.Label(window, text="Enter YouTube URL:")
+label.grid(row=0, column=0, padx=5, pady=5)
+entry = tk.Entry(window, width=50)
+entry.grid(row=0, column=1, padx=5, pady=5)
+
+# Create paste button
+paste_button = tk.Button(window, text="Paste", command=paste_from_clipboard)
+paste_button.grid(row=0, column=2, padx=5, pady=5)
+
+# Create clear button
+clear_button = tk.Button(window, text="Clear", command=clear_entry)
+clear_button.grid(row=0, column=3, padx=5, pady=5)
+
+# Create resolution dropdown menu
+resolutions = ["1080p", "720p", "480p", "360p", "240p", "144p"]
+resolution_var = tk.StringVar(window)
+resolution_var.set(resolutions[0])  # Default resolution
+resolution_dropdown = tk.OptionMenu(window, resolution_var, *resolutions)
+resolution_dropdown.grid(row=1, column=2, columnspan=2, padx=5, pady=5)
+
+# Create show details button
+details_button = tk.Button(window, text="Show Details", command=show_video_details)
+details_button.grid(row=1, column=0, padx=0, pady=5)
+
+# Create download button
+download_button = tk.Button(window, text="Download", command=download_video)
+download_button.grid(row=1, column=1, padx=0, pady=5)
+
+
+# Create title label
+title_label = tk.Label(window, text="")
+title_label.grid(row=3, column=0, columnspan=3, padx=5, pady=5)
+
+# Create thumbnail label
+thumbnail_label = tk.Label(window)
+thumbnail_label.grid(row=4, column=0, columnspan=3, padx=5, pady=5)
+
+# Create progress bar
+progress_bar = ttk.Progressbar(window, orient="horizontal", length=300, mode="determinate")
+progress_bar.grid(row=5, column=0, columnspan=3, padx=5, pady=5)
+
+# Create status label
+status_label = tk.Label(window, text="")
+status_label.grid(row=6, column=0, columnspan=3, padx=5, pady=5)
+
+# root = tk.Tk()
+# root.title("YouTube Downloader")
+
+# Start the main event loop
+window.mainloop()
+                            
+                        </code></pre>
+                        This code however has some restriction. It will not be able to download a video that is age-restricted.
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <h3>Visual Novel Using Renpy (On-Hold)</h3>
+            <hr>
+            <!-- internship -->
+            <br>
+            <h3>Past Internship</h3><br>
+            <p><b>Agency</b>: Brunei Darussalam Meteorological Department</p>
+            <p><b>Period</b>: 11 Jan 2023 - 18 April 2023</p>
+            <p><b>Task</b></p>
+            <p><b>Primary Task</b>: Coming up with a new design for their website(unfinished) and sort climate related data.</p>
+            <p><b>Secondary Task</b>: Logistic and looking for quotation</p>
+
+
+            <br>
+            <hr>
+            <!-- education -->
+            <h3>Education</h3>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h4>University Brunei Darussalam</h4>
+                        <p>Currently Attending (Aug 2020-)</p>
+                    </div>
+                    <div class="col">
+                        <h4>PTEM - A Level - 2018</h4>
+                        <p>
+                            Physics - B <br>
+                            Mathematics - D <br>
+                            Chemistry - D <br>
+                            Thinking Skills - E
+                        </p>
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>SMSAB - O Level - 2016</h4>
+                    <p>
+                        Bahasa Melayu - C <br>
+                        Biology - B <br>
+                        Chemistry - C <br>
+                        English Language - C <br>
+                        Geography - B <br>
+                        Islamic Religious Knowledge - C <br>
+                        Mathematics - B <br>
+                        Physics - B 
+                    </p>
+                </div>
+            </div>                  
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+</body>
+</html>
