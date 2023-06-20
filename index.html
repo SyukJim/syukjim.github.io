@@ -14,6 +14,10 @@
         .custom-offcanvas {
             width: 800px;
         }
+
+        .custom-container{
+            padding: 10px;
+        }
     </style>
 
     <title>Home</title>
@@ -23,36 +27,45 @@
     <br>
 
     <div class="container" >
-        <div class="col-md-8 mx-auto" style="border-left: 1px solid black; 
-                                            border-right: 1px solid black;
-                                            border-top: 1px solid black;
+        <div class="col-md-8 mx-auto" style="border-left: 1px solid grey; 
+                                            border-right: 1px solid grey;
+                                            border-top: 1px solid grey;
                                             border-radius: 10px">
-            <h1>About</h1>
+            <div class="custom-container">
+                <h1>About</h1>
+            </div>
             <hr>
 
             <!-- introduction -->
-            <h3>Introduction</h3>
-            <br>
-            <p>
-                I am Syukri Haji Ahmad, currently a third-year bachelor student attending University Brunei Darussalam, 
-                majoring in Computer Science under the faculty of the School of Digital Science.
-            </p>
+            <div class="custom-container">
+                <h3>Introduction</h3>
+                <br>
+                <p>
+                    I am Syukri Haji Ahmad, currently a third-year bachelor student attending University Brunei Darussalam, 
+                    majoring in Computer Science under the faculty of the School of Digital Science.
+                </p>
+            </div>
             <hr>
             <!-- project -->
-            <h3>Project</h3>
+            <div class="custom-container">
+                <h3>Project</h3>
+            </div>
             <hr>
-            
-            <h4>Semi Automatic Data Sorter</h4>
+            <div class="custom-container">
+                <h4>Semi Automatic Data Sorter</h4>
             <br>
             <p>
                 This project was completed during my internship at the Brunei Darussalam Meteorological Department in early 2023. 
                 The objective of the task was to organize the climate data, including rainfall, mean temperature, and minimum and maximum temperature of Brunei Darussalam, 
                 into a more accessible format for analysis. To accomplish this, I developed a simple Python code that significantly expedited the data sorting process.
             </p>
-
             <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#semiautodatasorter" role="button" aria-controls="semiautodatasorter">
                 More
             </a>
+            </div>
+            
+
+            
             <div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="semiautodatasorter" aria-labelledby="offcanvasExampleLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasExampleLabel">Code for Data Sorter</h5>
@@ -105,15 +118,17 @@ for i in range(0, worksheet.max_row):
             </div>
             <br>
             <hr>
-            <h4>Youtube Video Downloader</h4> <br>
-            <p>
-                This project was completed when I was practicing and trying to understand on how to use Tkinter (Python Library) that allow the use of Graphical User Interface (GUI). 
-                This project also use a library called Pytube.
-            </p>
-
-            <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#ytdownloader" role="button" aria-controls="ytdownloader">
-                More
-            </a>
+            <div class="custom-container">
+                <h4>Youtube Video Downloader</h4> <br>
+                <p>
+                    This project was completed when I was practicing and trying to understand on how to use Tkinter (Python Library) that allow the use of Graphical User Interface (GUI). 
+                    This project also use a library called Pytube.
+                </p>
+                <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#ytdownloader" role="button" aria-controls="ytdownloader">
+                    More
+                </a>
+            </div>
+            
        
             <div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="ytdownloader" aria-labelledby="offcanvasExampleLabel">
                 <div class="offcanvas-header">
@@ -262,29 +277,33 @@ window.mainloop()
             </div>
             <br>
             <hr>
-            <h4>Visual Novel Using Renpy (On-Hold)</h4>
-            <br>
-            <p>This project started because I wanted to practice my Python programming skills and combine my passion for game development with composing music. 
-                The main features of this game are that the player has to explore the town and meet new people at specific times of the day. 
-                The game will also feature a day cycle, attending school, doing part-time jobs, and more.
-            </p>
+            <div class="custom-container">
+                <h4>Visual Novel Using Renpy (On-Hold)</h4>
+                <br>
+                <p>This project started because I wanted to practice my Python programming skills and combine my passion for game development with composing music. 
+                    The main features of this game are that the player has to explore the town and meet new people at specific times of the day. 
+                    The game will also feature a day cycle, attending school, doing part-time jobs, and more.
+                </p>
+            </div>
+            
             <hr>
             <!-- internship -->
             <br>
-            <h3>Past Internship</h3><br>
-            <p><b>Agency</b>: Brunei Darussalam Meteorological Department</p>
-            <p><b>Period</b>: 11 Jan 2023 - 18 April 2023</p>
-            <p><b>Task</b></p>
-            <p><b>Primary Task</b>: Coming up with a new design for their website(unfinished) and sort climate related data.</p>
-            <p><b>Secondary Task</b>: Logistic and looking for quotation</p>
-
+            <div class="custom-container">
+                <h3>Past Internship</h3><br>
+                <p><b>Agency</b>: Brunei Darussalam Meteorological Department</p>
+                <p><b>Period</b>: 11 Jan 2023 - 18 April 2023</p>
+                <p><b>Task</b></p>
+                <p><b>Primary Task</b>: Coming up with a new design for their website(unfinished) and sort climate related data.</p>
+                <p><b>Secondary Task</b>: Logistic and looking for quotation</p>
+            </div>
 
             <br>
             <hr>
             <!-- education -->
-            <h3>Education</h3>
-            <br>
-            <div class="container">
+            <div class="custom-container">
+                <h3>Education</h3>
+                <br>
                 <h4>University Brunei Darussalam - Bachelor's Degree</h4>
                 <p>Currently Attending (Aug 2020-)</p>
                 <br>
