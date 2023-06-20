@@ -89,7 +89,7 @@ import openpyxl
 for i in range(0, worksheet.max_row):
     for col in worksheet.iter_cols(1, worksheet.max_column):
         temp = str(col[i].value)
-        if targetSearch in temp:
+        if targetSearch in temp: # targetsearch is the variable used to store the user input
             for col2 in worksheet.iter_cols(1, worksheet.max_column):
                 print(col2[i].value, end="\t")
             print('')
