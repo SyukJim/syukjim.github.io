@@ -30,7 +30,8 @@
             <!-- introduction -->
             <h3>Introduction</h3>
             <br>
-            <p>I am Syukri Haji Ahmad, currently a third-year bachelor student attending University Brunei Darussalam, majoring in Computer Science under the faculty of the School of Digital Science.</p>
+            <p>I am Syukri Haji Ahmad, currently a third-year bachelor student attending University Brunei Darussalam, 
+                majoring in Computer Science under the faculty of the School of Digital Science.</p>
             <br>
             <hr>
             <!-- project -->
@@ -45,7 +46,7 @@
             </p>
 
             <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#semiautodatasorter" role="button" aria-controls="semiautodatasorter">
-                code
+                More
             </a>
             <div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="semiautodatasorter" aria-labelledby="offcanvasExampleLabel">
                 <div class="offcanvas-header">
@@ -54,12 +55,46 @@
                 </div>
                 <div class="offcanvas-body">
 
+                    Task given was to sort data from a txt and excel file into a new excel file. <br>
+                    Luckily traversing data in txt file relatively straight forward. <br><br>
 
-                    description for txt file
+                    How this code function is that we enter a "keyword" that we want to find and it print it into the terminal
                     <br>
                     <div class="container">
-                        
+                        <pre><code class="language-python">
+TargetSearch = input("Please enter desired keyword to be searched: ")
+# f is the variable used to stored the open file
+# for example: f = open("data.txt")
+for i in f:
+    if TargetSearch in i:
+        counter += 1
+        print(i, end="")
+                        </code></pre>
                     </div>
+
+                    The "counter" variables was not really necessary, it was there just to make debugging somewhat manageable. <br><br>
+
+                    Traversing xlsx files however requires a few extra steps. <br><br>
+                    To do this we have to use a library called "openpyxl".
+                    <pre><code class="language-python">
+import openpyxl
+                    </code></pre>
+                    <br>
+                    Same as before, we have to enter what "keyword" we want and it print the data into the terminal.
+
+                    Here is the code (traversing data part only).
+                    <br><br>
+
+                    <pre><code class="language-python">
+for i in range(0, worksheet.max_row):
+    for col in worksheet.iter_cols(1, worksheet.max_column):
+        temp = str(col[i].value)
+        if targetSearch in temp:
+            for col2 in worksheet.iter_cols(1, worksheet.max_column):
+                print(col2[i].value, end="\t")
+            print('')
+                    </code></pre>
+                    Take note that the code above will print the cell container with the keyword the cell next to it with data.
                 </div>
             </div>
             <br><br>
@@ -70,7 +105,7 @@
             </p>
 
             <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#ytdownloader" role="button" aria-controls="ytdownloader">
-                code
+                More
             </a>
        
             <div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="ytdownloader" aria-labelledby="offcanvasExampleLabel">
@@ -221,7 +256,10 @@ window.mainloop()
             <br>
             <br>
 
-            <h3>Visual Novel Using Renpy (On-Hold)</h3>
+            <h4>Visual Novel Using Renpy (On-Hold)</h4>
+            <br>
+            <p>This project started because I want to practice my python programming skill. The main features of this game is that the player has to explore the town 
+                and meet new people at a specific time of the day. The game will also features day cycle, attending school, doing part time job etc.</p>
             <hr>
             <!-- internship -->
             <br>
@@ -239,34 +277,28 @@ window.mainloop()
             <h3>Education</h3>
             <br>
             <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h4>University Brunei Darussalam</h4>
-                        <p>Currently Attending (Aug 2020-)</p>
-                    </div>
-                    <div class="col">
-                        <h4>PTEM - A Level - 2018</h4>
-                        <p>
-                            Physics - B <br>
-                            Mathematics - D <br>
-                            Chemistry - D <br>
-                            Thinking Skills - E
-                        </p>
-                    </div>
-                </div>
-                <div class="col">
-                    <h4>SMSAB - O Level - 2016</h4>
-                    <p>
-                        Bahasa Melayu - C <br>
-                        Biology - B <br>
-                        Chemistry - C <br>
-                        English Language - C <br>
-                        Geography - B <br>
-                        Islamic Religious Knowledge - C <br>
-                        Mathematics - B <br>
-                        Physics - B 
-                    </p>
-                </div>
+                <h4>University Brunei Darussalam</h4>
+                <p>Currently Attending (Aug 2020-)</p>
+                <br>
+                <h4>PTEM - A Level - 2018</h4>
+                <p>
+                    Physics - B <br>
+                    Mathematics - D <br>
+                    Chemistry - D <br>
+                    Thinking Skills - E
+                </p>
+                <br>
+                <h4>SMSAB - O Level - 2016</h4>
+                <p>
+                    Bahasa Melayu - C <br>
+                    Biology - B <br>
+                    Chemistry - C <br>
+                    English Language - C <br>
+                    Geography - B <br>
+                    Islamic Religious Knowledge - C <br>
+                    Mathematics - B <br>
+                    Physics - B 
+                </p>
             </div>                  
         </div>
     </div>
