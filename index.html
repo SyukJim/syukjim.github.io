@@ -22,6 +22,9 @@
         hr.new2 {
             border-top: 1px dashed red;
           }
+        body{
+            background-color: #ffd194;
+        }
     </style>
 
     <title>About</title>
@@ -63,7 +66,7 @@
                 The objective of the task was to organize the climate data, including rainfall, mean temperature, and minimum and maximum temperature of Brunei Darussalam, 
                 into a more accessible format for analysis. To accomplish this, I developed a simple Python code that significantly expedited the data sorting process.
             </p>
-            <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#semiautodatasorter" role="button" aria-controls="semiautodatasorter">
+            <a class="btn btn-outline-dark" data-bs-toggle="offcanvas" href="#semiautodatasorter" role="button" aria-controls="semiautodatasorter">
                 More
             </a>
             </div>
@@ -128,7 +131,7 @@ for i in range(0, worksheet.max_row):
                     This project was completed when I was practicing and trying to understand on how to use Tkinter (Python Library) that allow the use of Graphical User Interface (GUI). 
                     This project also use a library called Pytube.
                 </p>
-                <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#ytdownloader" role="button" aria-controls="ytdownloader">
+                <a class="btn btn-outline-dark" data-bs-toggle="offcanvas" href="#ytdownloader" role="button" aria-controls="ytdownloader">
                     More
                 </a>
             </div>
@@ -288,49 +291,124 @@ window.mainloop()
                     The main features of this game are that the player has to explore the town and meet new people at specific times of the day. 
                     The game will also feature a day cycle, attending school, doing part-time jobs, and more.
                 </p>
+
+                <a class="btn btn-outline-dark" data-bs-toggle="offcanvas" href="#vnproject" role="button" aria-controls="vnproject">
+                    More
+                </a>
+
+                <div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="vnproject" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Visual Novel using Renpy</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        Here is the member that is working on this project and their roles.
+                        <br><br>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Roles</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Syukri</td>
+                                    <td>Project Director</td>
+                                </tr>
+                                <tr>
+                                    <td>Syukri</td>
+                                    <td>Project Manager</td>
+                                </tr>
+                                <tr>
+                                    <td>Hassanal</td>
+                                    <td>Strory Writer</td>
+                                </tr>
+                                <tr>
+                                    <td>Hazim</td>
+                                    <td>Visual Artist</td>
+                                </tr>
+                                <tr>
+                                    <td>Hazim</td>
+                                    <td>Character Illustrator</td>
+                                </tr>
+                                <tr>
+                                    <td>Hassanal</td>
+                                    <td>Background Artist</td>
+                                </tr>
+                                <tr>
+                                    <td>Syukri</td>
+                                    <td>Composer/SFX</td>
+                                </tr>
+                                <tr>
+                                    <td>Syukri</td>
+                                    <td>Lead Programmer</td>
+                                </tr>
+                                <tr>
+                                    <td>Syukri</td>
+                                    <td>UI Designer</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <br>
+                        Some of the song composed for this project
+                        <br>
+                        <br>
+                        Theme for the Village: 
+                        <br>
+                        <audio controls controlsList="nodownload">
+                            <source src="music/villagetheme.ogg" type="audio/ogg">
+                        </audio>
+                        <br>
+                        more preview song will be uploaded!
+                    </div> <!-- body end-->
+                </div>
             </div>
             <hr>
+            <!-- skill -->
             <div class="custom-container">
                 <h3>Skills</h3>
+                <br>
                 <p>Programming Skills</p>
                 <table class="table">
                     <thead>
-                        <tr>
+                        <tr class="table-warning">
                             <th scope="col">#</th>
                             <th scope="col">Language</th>
                             <th scope="col">Level</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="table-warning">
                             <th scope="col">1</th>
-                            <th scope="col">Python</th>
-                            <th scope="col">Intermediate</th>
+                            <td scope="col">Python</td>
+                            <td scope="col">Intermediate</td>
                         </tr>
-                        <tr>
+                        <tr class="table-warning">
                             <th scope="col">2</th>
-                            <th scope="col">C#</th>
-                            <th scope="col">Basic</th>
+                            <td scope="col">C#</td>
+                            <td scope="col">Basic</td>
                         </tr>
-                        <tr>
+                        <tr class="table-warning">
                             <th scope="col">3</th>
-                            <th scope="col">Java</th>
-                            <th scope="col">Basic</th>
+                            <td scope="col">Java</td>
+                            <td scope="col">Basic</td>
                         </tr>
-                        <tr>
+                        <tr class="table-warning">
                             <th scope="col">4</th>
-                            <th scope="col">MySql</th>
-                            <th scope="col">Basic</th>
+                            <td scope="col">MySql</td>
+                            <td scope="col">Basic</td>
                         </tr>
-                        <tr>
+                        <tr class="table-warning">
                             <th scope="col">5</th>
-                            <th scope="col">HTML</th>
-                            <th scope="col">Intermediate</th>
+                            <td scope="col">HTML</td>
+                            <td scope="col">Intermediate</td>
                         </tr>
-                        <tr>
+                        <tr class="table-warning">
                             <th scope="col">6</th>
-                            <th scope="col">Javascript</th>
-                            <th scope="col">Basic</th>
+                            <td scope="col">Javascript</td>
+                            <td scope="col">Basic</td>
                         </tr>
                     </tbody>
                 </table>
