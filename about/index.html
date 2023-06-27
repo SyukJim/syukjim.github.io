@@ -29,9 +29,20 @@
             background-color: #ffd194;
         }
 
-        .custom-accordion{
-            background-color: #d8ac73;
+        .accordion-body{
+            background-color: #f2e7c3;
         }
+        .accordion-button{
+            background-color: #f2e7c3;
+        }
+        .accordion-button:not(.collapsed){
+            color: #383737;
+            background-color: #f3e2b0;
+        }
+        .accordion-button:not(.collapsed){
+            border-color: #000000;
+        }
+
     </style>
 
     <title>About</title>
@@ -464,34 +475,34 @@ window.mainloop()
             <div class="custom-container">
                 <div class="accordion accordion-flush" id="eduAccordion">
                     <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingOne">
+                        <h2 class="accordion-header" id="flush-headingOne">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eduOne" aria-expanded="false" aria-controls="eduOne">
                           Bachelor's Degree
                         </button>
-                      </h2>
-                      <div id="eduOne" class="accordion-collapse collapse" aria-labelledby="eduOne" data-bs-parent="#eduAccordion">
+                        </h2>
+                        <div id="eduOne" class="accordion-collapse collapse" aria-labelledby="eduOne" data-bs-parent="#eduAccordion">
                         <div class="accordion-body">
                             Location: University Brunei Darussalam <br><br>
                             Currently Attending. (Aug 2020-)</div>
-                      </div>
+                        </div>
                     </div>
                     <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingTwo">
+                        <h2 class="accordion-header" id="flush-headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eduTwo" aria-expanded="false" aria-controls="eduTwo">
                           A-Level
                         </button>
-                      </h2>
-                      <div id="eduTwo" class="accordion-collapse collapse" aria-labelledby="eduTwo" data-bs-parent="#eduAccordion">
-                        <div class="accordion-body">
-                            School: Pusat Tingkatan Enam Meragang <br>
-                            Year: 2018 <br><br>
-                            Results: <br>
-                            Physics - B <br>
-                            Mathematics - D <br>
-                            Chemistry - D <br>
-                            Thinking Skills - E
+                        </h2>
+                        <div id="eduTwo" class="accordion-collapse collapse" aria-labelledby="eduTwo" data-bs-parent="#eduAccordion">
+                            <div class="accordion-body">
+                                School: Pusat Tingkatan Enam Meragang <br>
+                                Year: 2018 <br><br>
+                                Results: <br>
+                                Physics - B <br>
+                                Mathematics - D <br>
+                                Chemistry - D <br>
+                                Thinking Skills - E
+                            </div>
                         </div>
-                      </div>
                     </div>
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="flush-headingThree">
@@ -500,19 +511,19 @@ window.mainloop()
                         </button>
                       </h2>
                         <div id="eduThree" class="accordion-collapse collapse" aria-labelledby="eduThree" data-bs-parent="#eduAccordion">
-                        <div class="accordion-body">
-                            School: Sekolah Menengah Sayyidina Abu Bakar <br>
-                            Year: 2016 <br><br>
-                            Results: <br>
-                            Bahasa Melayu - C <br>
-                            Biology - B <br>
-                            Chemistry - C <br>
-                            English Language - C <br>
-                            Geography - B <br>
-                            Islamic Religious Knowledge - C <br>
-                            Mathematics - B <br>
-                            Physics - B 
-                        </div>
+                            <div class="accordion-body">
+                                School: Sekolah Menengah Sayyidina Abu Bakar <br>
+                                Year: 2016 <br><br>
+                                Results: <br>
+                                Bahasa Melayu - C <br>
+                                Biology - B <br>
+                                Chemistry - C <br>
+                                English Language - C <br>
+                                Geography - B <br>
+                                Islamic Religious Knowledge - C <br>
+                                Mathematics - B <br>
+                                Physics - B 
+                            </div>
                         </div>
                     </div>
                 </div>
