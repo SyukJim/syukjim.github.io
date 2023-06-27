@@ -64,20 +64,25 @@
         <div id="second-hand" class="hand"></div>
         
         <div class="number" style="top: 30px; left: 210px;">1</div>
+        <div class="number" style="top: 11px; left: 159px; transform: rotate(-85deg)">--</div>
+        <div class="number" style="top: 13px; left: 170px; transform: rotate(-80deg)">--</div>
+        <!-- <div class="number" style="top: 30px; left: 210px;">-</div>
+        <div class="number" style="top: 30px; left: 210px;">-</div> -->
+
         <div class="number" style="top: 75px; left: 260px;">2</div>
         <div class="number" style="top: 143px; left: 280px;">3</div>
         
-        <div class="number" style="top: 200px; left: 260px;">4</div>
-        <div class="number" style="top: 250px; left: 210px;">5</div>
+        <div class="number" style="top: 210px; left: 260px;">4</div>
+        <div class="number" style="top: 255px; left: 210px;">5</div>
         <div class="number" style="top: 270px; left: 145px;">6</div>
         
-        <div class="number" style="top: 140px; left: 10px;">7</div>
-        <div class="number" style="top: 140px; left: 10px;">8</div>
-        <div class="number" style="top: 143px; left: 10px;">9</div>
+        <div class="number" style="top: 255px; left: 80px;">7</div>
+        <div class="number" style="top: 210px; left: 30px;">8</div>
+        <div class="number" style="top: 143px; left: 15px;">9</div>
 
-        <div class="number" style="top: 75px; left: 40px;">10</div>
+        <div class="number" style="top: 75px; left: 30px;">10</div>
         <div class="number" style="top: 30px; left: 80px;">11</div>
-        <div class="number" style="top: 10px; left: 140px;">12</div>
+        <div class="number" style="top: 10px; left: 145px;">12</div>
     </div>
 
     <script>
@@ -86,6 +91,10 @@
             var hour = now.getHours() % 12;
             var minute = now.getMinutes();
             var second = now.getSeconds();
+
+            /*var hour = 1;
+            var minute = 20;
+            var second = 2;*/
 
             var hourHand = document.getElementById("hour-hand");
             var minuteHand = document.getElementById("minute-hand");
