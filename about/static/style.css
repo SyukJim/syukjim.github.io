@@ -1,0 +1,30 @@
+.offcanvas{
+    background-color: #d8ac73;
+}
+.custom-offcanvas {
+    width: 800px;
+}
+
+.custom-container{
+    padding: 10px;
+}
+hr.new2 {
+    border-top: 1px dashed red;
+  }
+body{
+    background-color: #ffd194;
+}
+
+.accordion-body{
+    background-color: #f2e7c3;
+}
+.accordion-button{
+    background-color: #f2e7c3;
+}
+.accordion-button:not(.collapsed){
+    color: #000000;
+    background-color: #f3e2b0;
+}
+.accordion-button:not(.collapsed){
+    border-color: #000000;
+}
