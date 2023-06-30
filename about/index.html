@@ -21,73 +21,76 @@
 <body>
 
     <br>
-
-    <div class="col">
+    <div class="row">
+    <div class="col-2">
         <div class="page-container">
             <div class="circular-cutout">
               <img src="picture/pfp.jpg" alt="Profile Image">
             </div>
-          </div>          
+            <div class="belowimg">
+                Age: 23 years old
+            </div> 
+        </div>          
     </div>
+    <div class="col-9">
+        <div class="container">
+            <div class="col-md-8 mx-auto" style="border-left: 1px solid #383737; 
+                                                border-right: 1px solid #383737;
+                                                border-top: 1px solid #383737;
+                                                border-radius: 10px">
+                <div class="custom-container">
+                    <h1>About</h1>
+                </div>
+                <hr>
 
-    <div class="container">
-        <div class="col-md-8 mx-auto" style="border-left: 1px solid #383737; 
-                                            border-right: 1px solid #383737;
-                                            border-top: 1px solid #383737;
-                                            border-radius: 10px">
-            <div class="custom-container">
-                <h1>About</h1>
-            </div>
-            <hr>
+                <!-- introduction -->
+                <div class="custom-container">
+                    <h3>Introduction</h3>
 
-            <!-- introduction -->
-            <div class="custom-container">
-                <h3>Introduction</h3>
-
-                <!-- <div class="card" style="width: 10rem;">
-                    <img src="picture/photo.jpg" alt="self picture">
-                </div> -->
+                    <!-- <div class="card" style="width: 10rem;">
+                        <img src="picture/photo.jpg" alt="self picture">
+                    </div> -->
+                    <br>
+                    <p>
+                        I am Syukri Haji Ahmad, currently a third-year bachelor's degree student attending University Brunei Darussalam, 
+                        majoring in Computer Science under the faculty of the School of Digital Science.
+                    </p>
+                </div>
+                <hr>
+                <!-- project -->
+                <div class="custom-container">
+                    <h3>Project</h3>
+                </div>
+                <hr class="new2">
+                <div class="custom-container">
+                    <h4>Semi Automatic Data Sorter</h4>
                 <br>
                 <p>
-                    I am Syukri Haji Ahmad, currently a third-year bachelor's degree student attending University Brunei Darussalam, 
-                    majoring in Computer Science under the faculty of the School of Digital Science.
+                    This project was completed during my internship at the Brunei Darussalam Meteorological Department in early 2023. 
+                    The objective of the task was to organize the climate data, including rainfall, mean temperature, and minimum and maximum temperature of Brunei Darussalam, 
+                    into a more accessible format for analysis. To accomplish this, I developed a simple Python code that significantly expedited the data sorting process.
                 </p>
-            </div>
-            <hr>
-            <!-- project -->
-            <div class="custom-container">
-                <h3>Project</h3>
-            </div>
-            <hr class="new2">
-            <div class="custom-container">
-                <h4>Semi Automatic Data Sorter</h4>
-            <br>
-            <p>
-                This project was completed during my internship at the Brunei Darussalam Meteorological Department in early 2023. 
-                The objective of the task was to organize the climate data, including rainfall, mean temperature, and minimum and maximum temperature of Brunei Darussalam, 
-                into a more accessible format for analysis. To accomplish this, I developed a simple Python code that significantly expedited the data sorting process.
-            </p>
-            <a class="btn btn-outline-dark" data-bs-toggle="offcanvas" href="#semiautodatasorter" role="button" aria-controls="semiautodatasorter">
-                More
-            </a>
-            </div>
-            
-
-            
-            <div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="semiautodatasorter" aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Code for Data Sorter</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <a class="btn btn-outline-dark" data-bs-toggle="offcanvas" href="#semiautodatasorter" role="button" aria-controls="semiautodatasorter">
+                    More
+                </a>
                 </div>
-                <div class="offcanvas-body">
+                
 
-                    Task given was to sort data from a txt and excel file into a new excel file. <br>
-                    Luckily traversing data in txt file relatively straight forward. <br><br>
+                
+                <div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="semiautodatasorter" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Code for Data Sorter</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
 
-                    How this code function is that we enter a "keyword" that we want to find and it print it into the terminal
-                    <br>
-                    <div class="container">
-                        <pre><code class="language-python">
+                        Task given was to sort data from a txt and excel file into a new excel file. <br>
+                        Luckily traversing data in txt file relatively straight forward. <br><br>
+
+                        How this code function is that we enter a "keyword" that we want to find and it print it into the terminal
+                        <br>
+                        <div class="container">
+                            <pre><code class="language-python">
 TargetSearch = input("Please enter desired keyword to be searched: ")
 # f is the variable used to stored the open file
 # for example: f = open("data.txt")
@@ -95,23 +98,23 @@ for i in f:
     if TargetSearch in i:
         counter += 1
         print(i, end="")
-                        </code></pre>
-                    </div>
+                            </code></pre>
+                        </div>
 
-                    The "counter" variables was not really necessary, it was there just to make debugging somewhat manageable. <br><br>
+                        The "counter" variables was not really necessary, it was there just to make debugging somewhat manageable. <br><br>
 
-                    Traversing xlsx files however requires a few extra steps. <br><br>
-                    To do this we have to use a library called "openpyxl".
-                    <pre><code class="language-python">
+                        Traversing xlsx files however requires a few extra steps. <br><br>
+                        To do this we have to use a library called "openpyxl".
+                        <pre><code class="language-python">
 import openpyxl
-                    </code></pre>
-                    <br>
-                    Same as before, we have to enter what "keyword" we want and it print the data into the terminal.
+                        </code></pre>
+                        <br>
+                        Same as before, we have to enter what "keyword" we want and it print the data into the terminal.
 
-                    Here is the code (traversing data part only).
-                    <br><br>
+                        Here is the code (traversing data part only).
+                        <br><br>
 
-                    <pre><code class="language-python">
+                        <pre><code class="language-python">
 for i in range(0, worksheet.max_row):
     for col in worksheet.iter_cols(1, worksheet.max_column):
         temp = str(col[i].value)
@@ -120,34 +123,34 @@ for i in range(0, worksheet.max_row):
             for col2 in worksheet.iter_cols(1, worksheet.max_column):
                 print(col2[i].value, end="\t")
             print('')
-                    </code></pre>
-                    Take note that the code above will print the cell container with the keyword and the cell next to it with the data.
+                        </code></pre>
+                        Take note that the code above will print the cell container with the keyword and the cell next to it with the data.
+                    </div>
                 </div>
-            </div>
-            <br>
-            <hr>
-            <div class="custom-container">
-                <h4>Youtube Video Downloader</h4> <br>
-                <p>
-                    This project was completed when I was practicing and trying to understand on how to use Tkinter (Python Library) that allow the use of Graphical User Interface (GUI). 
-                    This project also use a library called Pytube.
-                </p>
-                <a class="btn btn-outline-dark" data-bs-toggle="offcanvas" href="#ytdownloader" role="button" aria-controls="ytdownloader">
-                    More
-                </a>
-            </div>
-            
-       
-            <div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="ytdownloader" aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Code for Youtube downloader</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <br>
+                <hr>
+                <div class="custom-container">
+                    <h4>Youtube Video Downloader</h4> <br>
+                    <p>
+                        This project was completed when I was practicing and trying to understand on how to use Tkinter (Python Library) that allow the use of Graphical User Interface (GUI). 
+                        This project also use a library called Pytube.
+                    </p>
+                    <a class="btn btn-outline-dark" data-bs-toggle="offcanvas" href="#ytdownloader" role="button" aria-controls="ytdownloader">
+                        More
+                    </a>
                 </div>
-                <div class="offcanvas-body">
-                    This is the example code without using Tkinter. This was used to test the downloading functionality of Pytube.
-                    <br>
-                    <div class="container">
-                        <pre><code class="language-python">
+                
+        
+                <div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="ytdownloader" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Code for Youtube downloader</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        This is the example code without using Tkinter. This was used to test the downloading functionality of Pytube.
+                        <br>
+                        <div class="container">
+                            <pre><code class="language-python">
 from pytube import YouTube
 
 def download_video(url):
@@ -164,13 +167,13 @@ def download_video(url):
 
 video_url = "youtube link here"
 download_video(video_url)
-                            
-                        </code></pre>
+                                
+                            </code></pre>
 
-                        <br>
+                            <br>
 
-                        Code below will use Tkinter to download Youtube video.
-                        <pre><code class="language-python">
+                            Code below will use Tkinter to download Youtube video.
+                            <pre><code class="language-python">
 import tkinter as tk
 from pytube import YouTube
 from tkinter import ttk
@@ -277,255 +280,257 @@ status_label.grid(row=6, column=0, columnspan=3, padx=5, pady=5)
 
 # Start the main event loop
 window.mainloop()
-                            
-                        </code></pre>
-                        This code however has some restriction. It will not be able to download a video that is age-restricted.
+                                
+                            </code></pre>
+                            This code however has some restriction. It will not be able to download a video that is age-restricted.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <br>
-            <hr>
-            <div class="custom-container">
-                <h4>Visual Novel Using Renpy (On-Hold)</h4>
                 <br>
-                <p>This project started because I wanted to practice my Python programming skills and combine my passion for game development with composing music. 
-                    The main features of this game are that the player has to explore the town and meet new people at specific times of the day. 
-                    The game will also feature a day cycle, attending school, doing part-time jobs, and more.
-                </p>
+                <hr>
+                <div class="custom-container">
+                    <h4>Visual Novel Using Renpy (On-Hold)</h4>
+                    <br>
+                    <p>This project started because I wanted to practice my Python programming skills and combine my passion for game development with composing music. 
+                        The main features of this game are that the player has to explore the town and meet new people at specific times of the day. 
+                        The game will also feature a day cycle, attending school, doing part-time jobs, and more.
+                    </p>
 
-                <a class="btn btn-outline-dark" data-bs-toggle="offcanvas" href="#vnproject" role="button" aria-controls="vnproject">
-                    More
-                </a>
+                    <a class="btn btn-outline-dark" data-bs-toggle="offcanvas" href="#vnproject" role="button" aria-controls="vnproject">
+                        More
+                    </a>
 
-                <div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="vnproject" aria-labelledby="offcanvasExampleLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Visual Novel using Renpy</h5>
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="vnproject" aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Visual Novel using Renpy</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            Here is the member that is working on this project and their roles.
+                            <br><br>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Roles</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Syukri</td>
+                                        <td>Project Director</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Syukri</td>
+                                        <td>Project Manager</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hassanal</td>
+                                        <td>Story Writer</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hazim</td>
+                                        <td>Visual Artist</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hazim</td>
+                                        <td>Character Illustrator</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hassanal</td>
+                                        <td>Background Artist</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Syukri</td>
+                                        <td>Composer/SFX</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Syukri</td>
+                                        <td>Lead Programmer</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Syukri</td>
+                                        <td>UI Designer</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <br>
+                            Some of the song composed for this project
+                            <br>
+                            <br>
+                            Theme for the Village: 
+                            <br>
+                            <audio controls controlsList="nodownload">
+                                <source src="music/villagetheme.ogg" type="audio/ogg">
+                            </audio>
+                            <br>
+                            More preview song will be uploaded!
+                        </div> <!-- body end-->
                     </div>
-                    <div class="offcanvas-body">
-                        Here is the member that is working on this project and their roles.
-                        <br><br>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Roles</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Syukri</td>
-                                    <td>Project Director</td>
-                                </tr>
-                                <tr>
-                                    <td>Syukri</td>
-                                    <td>Project Manager</td>
-                                </tr>
-                                <tr>
-                                    <td>Hassanal</td>
-                                    <td>Story Writer</td>
-                                </tr>
-                                <tr>
-                                    <td>Hazim</td>
-                                    <td>Visual Artist</td>
-                                </tr>
-                                <tr>
-                                    <td>Hazim</td>
-                                    <td>Character Illustrator</td>
-                                </tr>
-                                <tr>
-                                    <td>Hassanal</td>
-                                    <td>Background Artist</td>
-                                </tr>
-                                <tr>
-                                    <td>Syukri</td>
-                                    <td>Composer/SFX</td>
-                                </tr>
-                                <tr>
-                                    <td>Syukri</td>
-                                    <td>Lead Programmer</td>
-                                </tr>
-                                <tr>
-                                    <td>Syukri</td>
-                                    <td>UI Designer</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <br>
-                        Some of the song composed for this project
-                        <br>
-                        <br>
-                        Theme for the Village: 
-                        <br>
-                        <audio controls controlsList="nodownload">
-                            <source src="music/villagetheme.ogg" type="audio/ogg">
-                        </audio>
-                        <br>
-                        More preview song will be uploaded!
-                    </div> <!-- body end-->
                 </div>
-            </div>
-            <hr>
-            <!-- skill -->
-            <div class="custom-container">
-                <h3>Skills</h3>
+                <hr>
+                <!-- skill -->
+                <div class="custom-container">
+                    <h3>Skills</h3>
+                    <br>
+                    <p>Programming Skills</p>
+                    <table class="table">
+                        <thead>
+                            <tr class="table-warning">
+                                <th scope="col">#</th>
+                                <th scope="col">Language</th>
+                                <th scope="col">Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-warning">
+                                <th scope="col">1</th>
+                                <td scope="col">Python</td>
+                                <td scope="col">Intermediate</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="col">2</th>
+                                <td scope="col">C#</td>
+                                <td scope="col">Basic</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="col">3</th>
+                                <td scope="col">Java</td>
+                                <td scope="col">Basic</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="col">4</th>
+                                <td scope="col">MySql</td>
+                                <td scope="col">Basic</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="col">5</th>
+                                <td scope="col">HTML</td>
+                                <td scope="col">Intermediate</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="col">6</th>
+                                <td scope="col">Javascript</td>
+                                <td scope="col">Basic</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <hr>
+                <!-- internship -->
                 <br>
-                <p>Programming Skills</p>
-                <table class="table">
-                    <thead>
-                        <tr class="table-warning">
-                            <th scope="col">#</th>
-                            <th scope="col">Language</th>
-                            <th scope="col">Level</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="table-warning">
-                            <th scope="col">1</th>
-                            <td scope="col">Python</td>
-                            <td scope="col">Intermediate</td>
-                        </tr>
-                        <tr class="table-warning">
-                            <th scope="col">2</th>
-                            <td scope="col">C#</td>
-                            <td scope="col">Basic</td>
-                        </tr>
-                        <tr class="table-warning">
-                            <th scope="col">3</th>
-                            <td scope="col">Java</td>
-                            <td scope="col">Basic</td>
-                        </tr>
-                        <tr class="table-warning">
-                            <th scope="col">4</th>
-                            <td scope="col">MySql</td>
-                            <td scope="col">Basic</td>
-                        </tr>
-                        <tr class="table-warning">
-                            <th scope="col">5</th>
-                            <td scope="col">HTML</td>
-                            <td scope="col">Intermediate</td>
-                        </tr>
-                        <tr class="table-warning">
-                            <th scope="col">6</th>
-                            <td scope="col">Javascript</td>
-                            <td scope="col">Basic</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <hr>
-            <!-- internship -->
-            <br>
 
-            <div class="custom-container">
+                <div class="custom-container">
 
-                <h3>Past Internship</h3><br>
+                    <h3>Past Internship</h3><br>
 
-                <div class="accordion accordion-flush custom-accordion" id="InternAccordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pastInternOne" aria-expanded="false" aria-controls="pastInternOne">
-                        Brunei Darussalam Meteorological Department
-                        </button>
-                        </h2>
-                        <div id="pastInternOne" class="accordion-collapse collapse" aria-labelledby="pastInternOne" data-bs-parent="#InternAccordion">
-                            <div class="accordion-body">
-                                <p><b>Agency</b>: Brunei Darussalam Meteorological Department</p>
-                                <p><b>Period</b>: 11 Jan 2023 - 18 April 2023 (14 weeks)</p>
-                                <p><b>Task</b></p>
-                                <p><b>Primary Task</b>: Coming up with a new design for their website(unfinished) and sort climate related data.</p>
-                                <p><b>Secondary Task</b>: Logistic and looking for quotation</p>
+                    <div class="accordion accordion-flush custom-accordion" id="InternAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pastInternOne" aria-expanded="false" aria-controls="pastInternOne">
+                            Brunei Darussalam Meteorological Department
+                            </button>
+                            </h2>
+                            <div id="pastInternOne" class="accordion-collapse collapse" aria-labelledby="pastInternOne" data-bs-parent="#InternAccordion">
+                                <div class="accordion-body">
+                                    <p><b>Agency</b>: Brunei Darussalam Meteorological Department</p>
+                                    <p><b>Period</b>: 11 Jan 2023 - 18 April 2023 (14 weeks)</p>
+                                    <p><b>Task</b></p>
+                                    <p><b>Primary Task</b>: Coming up with a new design for their website(unfinished) and sort climate related data.</p>
+                                    <p><b>Secondary Task</b>: Logistic and looking for quotation</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <br>
-            <hr>
-            <!-- education -->
-            <div class="custom-container">
-                <h3>Education</h3>
-            </div>    
-            <hr>
+                <br>
+                <hr>
+                <!-- education -->
+                <div class="custom-container">
+                    <h3>Education</h3>
+                </div>    
+                <hr>
 
-            <div class="custom-container">
-                <div class="accordion accordion-flush" id="eduAccordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eduOne" aria-expanded="false" aria-controls="eduOne">
-                          Bachelor's Degree
-                        </button>
-                        </h2>
-                        <div id="eduOne" class="accordion-collapse collapse" aria-labelledby="eduOne" data-bs-parent="#eduAccordion">
-                        <div class="accordion-body">
-                            Location: University Brunei Darussalam <br><br>
-                            Currently Attending. (Aug 2020-)</div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eduTwo" aria-expanded="false" aria-controls="eduTwo">
-                          A-Level
-                        </button>
-                        </h2>
-                        <div id="eduTwo" class="accordion-collapse collapse" aria-labelledby="eduTwo" data-bs-parent="#eduAccordion">
+                <div class="custom-container">
+                    <div class="accordion accordion-flush" id="eduAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eduOne" aria-expanded="false" aria-controls="eduOne">
+                            Bachelor's Degree
+                            </button>
+                            </h2>
+                            <div id="eduOne" class="accordion-collapse collapse" aria-labelledby="eduOne" data-bs-parent="#eduAccordion">
                             <div class="accordion-body">
-                                School: Pusat Tingkatan Enam Meragang <br>
-                                Year: 2018 <br><br>
-                                Results: <br>
-                                Physics - B <br>
-                                Mathematics - D <br>
-                                Chemistry - D <br>
-                                Thinking Skills - E
+                                Location: University Brunei Darussalam <br><br>
+                                Currently Attending. (Aug 2020-)</div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eduThree" aria-expanded="false" aria-controls="eduThree">
-                          O-Level
-                        </button>
-                      </h2>
-                        <div id="eduThree" class="accordion-collapse collapse" aria-labelledby="eduThree" data-bs-parent="#eduAccordion">
-                            <div class="accordion-body">
-                                School: Sekolah Menengah Sayyidina Abu Bakar <br>
-                                Year: 2016 <br><br>
-                                Results: <br>
-                                Bahasa Melayu - C <br>
-                                Biology - B <br>
-                                Chemistry - C <br>
-                                English Language - C <br>
-                                Geography - B <br>
-                                Islamic Religious Knowledge - C <br>
-                                Mathematics - B <br>
-                                Physics - B 
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eduTwo" aria-expanded="false" aria-controls="eduTwo">
+                            A-Level
+                            </button>
+                            </h2>
+                            <div id="eduTwo" class="accordion-collapse collapse" aria-labelledby="eduTwo" data-bs-parent="#eduAccordion">
+                                <div class="accordion-body">
+                                    School: Pusat Tingkatan Enam Meragang <br>
+                                    Year: 2018 <br><br>
+                                    Results: <br>
+                                    Physics - B <br>
+                                    Mathematics - D <br>
+                                    Chemistry - D <br>
+                                    Thinking Skills - E
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eduThree" aria-expanded="false" aria-controls="eduThree">
+                            O-Level
+                            </button>
+                        </h2>
+                            <div id="eduThree" class="accordion-collapse collapse" aria-labelledby="eduThree" data-bs-parent="#eduAccordion">
+                                <div class="accordion-body">
+                                    School: Sekolah Menengah Sayyidina Abu Bakar <br>
+                                    Year: 2016 <br><br>
+                                    Results: <br>
+                                    Bahasa Melayu - C <br>
+                                    Biology - B <br>
+                                    Chemistry - C <br>
+                                    English Language - C <br>
+                                    Geography - B <br>
+                                    Islamic Religious Knowledge - C <br>
+                                    Mathematics - B <br>
+                                    Physics - B 
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
+                
+                
+                <!-- <a class="btn btn-primary" href="test.html" role="button">Test</a> -->
+                <!-- <a class="btn btn-primary" href="ToDoList/index.html" role="button">Test</a> -->
+
+                <!-- <audio controls controlsList="nodownload">
+                    <source src="lv3.ogg" type="audio/ogg">
+                </audio>
+                <audio controls>
+                    <source src="lv3.ogg" type="audio/ogg">
+                </audio> -->
+                <!-- <p>script</p>
+                <div class="custom-container">
+                    <p><script>document.write(test_return(1,5))</script></p> -->
+                    <!-- <p><script>document.write(days_left('2023-06-23'))</script></p> 
+                </div> -->
+
             </div>
-            
-            
-            
-            <!-- <a class="btn btn-primary" href="test.html" role="button">Test</a> -->
-            <!-- <a class="btn btn-primary" href="ToDoList/index.html" role="button">Test</a> -->
-
-            <!-- <audio controls controlsList="nodownload">
-                <source src="lv3.ogg" type="audio/ogg">
-            </audio>
-            <audio controls>
-                <source src="lv3.ogg" type="audio/ogg">
-            </audio> -->
-            <!-- <p>script</p>
-            <div class="custom-container">
-                 <p><script>document.write(test_return(1,5))</script></p> -->
-                <!-- <p><script>document.write(days_left('2023-06-23'))</script></p> 
-            </div> -->
-
         </div>
+    </div>
     </div>
 
     <div class="footer" style="background-color: #d8ac73;">
