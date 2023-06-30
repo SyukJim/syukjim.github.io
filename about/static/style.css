@@ -34,16 +34,34 @@ body{
 }
 
 .circular-cutout {
-position: absolute;
-top: 50px; /* Adjust the top position as needed */
-left: 200px; /* Adjust the left position as needed */
-width: 250px; /* Adjust the width of the circular cutout */
-height: 250px; /* Adjust the height of the circular cutout */
-border-radius: 50%; /* Make the cutout circular */
-overflow: hidden; /* Hide any content outside the circular cutout */
+    position: absolute;
+    top: 50px; /* Adjust the top position as needed */
+    left: 200px; /* Adjust the left position as needed */
+    width: 250px; /* Adjust the width of the circular cutout */
+    height: 250px; /* Adjust the height of the circular cutout */
+    border-radius: 50%; /* Make the cutout circular */
+    overflow: hidden; /* Hide any content outside the circular cutout */
 }
 
 .circular-cutout img {
+    position: relative;
+    top: -30%; /* Adjust the vertical position of the image within the cutout */
+    left: 0%; /* Adjust the horizontal position of the image within the cutout */
+    width: 100%;
+    height: auto;
+}
+
+.circular-cutout2{ 
+    align-items: center;
+    top: 50px; /* Adjust the top position as needed */
+    left: 200px; /* Adjust the left position as needed */
+    width: 250px; /* Adjust the width of the circular cutout */
+    height: 250px; /* Adjust the height of the circular cutout */
+    border-radius: 50%; /* Make the cutout circular */
+    overflow: hidden; /* Hide any content outside the circular cutout */
+}
+
+.circular-cutout2 img {
     position: relative;
     top: -30%; /* Adjust the vertical position of the image within the cutout */
     left: 0%; /* Adjust the horizontal position of the image within the cutout */
