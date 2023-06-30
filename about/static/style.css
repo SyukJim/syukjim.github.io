@@ -28,3 +28,23 @@ body{
 .accordion-button:not(.collapsed){
     border-color: #000000;
 }
+
+.page-container {
+    position: relative;
+  }
+  
+  .circular-cutout {
+    position: absolute;
+    top: 50px; /* Adjust the top position as needed */
+    left: 50px; /* Adjust the left position as needed */
+    width: 200px; /* Adjust the width of the circular cutout */
+    height: 200px; /* Adjust the height of the circular cutout */
+    border-radius: 50%; /* Make the cutout circular */
+    overflow: hidden; /* Hide any content outside the circular cutout */
+  }
+  
+  .circular-cutout img {
+    width: 100%;
+    height: auto;
+  }
+  
