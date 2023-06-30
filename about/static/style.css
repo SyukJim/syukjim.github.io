@@ -58,5 +58,6 @@ overflow: hidden; /* Hide any content outside the circular cutout */
     top: 325px;
     left: 200px;
     width: 250px;
+    border-radius: 20px;
 }
 
