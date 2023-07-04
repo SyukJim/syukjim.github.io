@@ -109,6 +109,9 @@ ul{
     margin: 0;
 }
 
+li{
+    padding-bottom: 5px;
+}
 
 
 @media screen and (max-width: 600px){
