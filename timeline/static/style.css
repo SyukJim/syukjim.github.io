@@ -28,6 +28,14 @@ body{
     font-size: 15px;
 }
 
+.description{
+    background: #f3f3f3;
+    position: relative;
+    left: -3px;
+    padding: 8px;
+    border-radius: 10px;
+}
+
 .left.container{
     left: 0;
 }
