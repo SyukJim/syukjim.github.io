@@ -18,7 +18,7 @@ body{
     padding: 10px 50px;
     position: relative;
     width: 50%;
-}
+}    
 
 .text-box{
     padding: 20px 30px;
@@ -131,9 +131,11 @@ li{
     height: 100%;
     z-index: 100;
 
+    background: #ffffffea;
+
     /* background: #ffffff00; */
 
-    animation: fadeout 1.5s forwards;
+    animation: fadeout 1.5s  ease 2s forwards;
 }
 
 .splash-screen h1{
@@ -147,7 +149,7 @@ li{
     padding: 10px;
 
     /* animation: falls 2s ease 1.5s forwards; */
-    animation: top-left 2s ease 1.5s forwards;
+    animation: top-left 2s ease 1s forwards;
 
     transition: all 0.3s;
 }
@@ -159,10 +161,9 @@ li{
     
 }
 
-
 @keyframes fadeout {
     0%, 60%{
-        background: #ffffff7c;
+        background: #ffffffea;
     }
 
     100%{
@@ -242,7 +243,7 @@ li{
         padding: 6px;
     
         /* animation: falls 2s ease 1.5s forwards; */
-        animation: top-left 2s ease 1.5s forwards;
+        animation: top-left 2s ease 1s forwards;
     }
 
     @keyframes falls{
