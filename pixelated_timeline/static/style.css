@@ -125,6 +125,73 @@ li{
     padding-bottom: 5px;
 }
 
+.splash-screen{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+
+    /* background: #ffffff00; */
+
+    animation: fadeout 1.5s forwards;
+}
+
+.splash-screen h1{
+    position: absolute;
+    /* text-align: center; */
+    top: 50%;
+    left: 45%;
+
+    background: #f3f3f381;
+    border-radius: 5px;
+    padding: 10px;
+
+    /* animation: falls 2s ease 1.5s forwards; */
+    animation: top-left 2s ease 1.5s forwards;
+
+    transition: all 0.3s;
+}
+
+.splash-screen h1:hover{
+    background: #414d69;
+    color: #fff;
+
+    
+}
+
+
+@keyframes fadeout {
+    0%, 60%{
+        background: #ffffff7c;
+    }
+
+    100%{
+        background: #ffffff00;
+    }
+}
+
+@keyframes falls{
+    0%{
+        top: 50%;
+    }
+
+    100%{
+        top: 150%;
+    }
+}
+
+@keyframes top-left{
+    0%{
+        top: 50%;
+        left: 45%;
+    }
+
+    100%{
+        top: 2%;
+        left: 1%;
+    }
+}
+
 
 @media screen and (max-width: 600px){
 
@@ -163,4 +230,41 @@ li{
         border-left: 0;
         left: -15px;
     }
+
+    .splash-screen h1{
+        position: absolute;
+        /* text-align: center; */
+        top: 30%;
+        left: 35%;
+    
+        background: #f3f3f381;
+        border-radius: 5px;
+        padding: 6px;
+    
+        /* animation: falls 2s ease 1.5s forwards; */
+        animation: top-left 2s ease 1.5s forwards;
+    }
+
+    @keyframes falls{
+        0%{
+            top: 50%;
+        }
+    
+        100%{
+            top: 150%;
+        }
+    }
+    
+    @keyframes top-left{
+        0%{
+            top: 30%;
+            left: 35%;
+        }
+    
+        100%{
+            top: -5.2%;
+            left: 1%;
+        }
+    }
+    
 }
