@@ -178,13 +178,16 @@ li{
 .headline h1:hover{
     background: #414d69;
     color: #fff;
-
-    
 }
 
 @keyframes fadeout {
     0%, 60%{
         background: #ffffffea;
+        z-index: 9;
+    }
+
+    80%{
+        z-index: 9;
     }
 
     100%{
@@ -254,11 +257,24 @@ li{
         left: -15px;
     }
 
-    .splash-screen h1{
+    .description img{
+        width: 200px;
+        height: 200px;
+    
+        transition: all 0.3s;
+    
+    }
+    
+    .description img:hover{
+        width: 200px;
+        height: 200px;
+    }
+
+    .headline h1{
         position: absolute;
         /* text-align: center; */
         top: 30%;
-        left: 35%;
+        left: 30%;
     
         background: #f3f3f381;
         border-radius: 5px;
@@ -281,11 +297,11 @@ li{
     @keyframes top-left{
         0%{
             top: 30%;
-            left: 35%;
+            left: 30%;
         }
     
         100%{
-            top: -5.2%;
+            top: 0;
             left: 1%;
         }
     }
