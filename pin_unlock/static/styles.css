@@ -1,0 +1,65 @@
+.pin-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    opacity: 0;
+    animation: unlock-animation 2s ease-in-out forwards;
+  }
+  
+  @keyframes unlock-animation {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .pin-dots {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+  }
+  
+  .pin-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: gray;
+  }
+  
+  .unlock-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .pin-dot.active {
+    background-color: green;
+  }
+  
+  .pin-dot.completed {
+    background-color: green;
+  }
+  
+  .pin-dot.error {
+    background-color: red;
+  }
+  
+  .unlock-text.show {
+    opacity: 1;
+  }
+  
+  .content {
+    display: none;
+  }
+  

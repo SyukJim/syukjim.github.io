@@ -1,3 +1,3 @@
 function enlargeImage(image){
-    image.classList.toggle("enlarge");
+    image.classList.toggle("enlarged");
 }
