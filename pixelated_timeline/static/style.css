@@ -37,17 +37,17 @@ body{
 }
 
 .description img{
-    width: 400px;
-    height: 250px;
+    width: 100%;
+    height: 30%;
 
     transition: all 0.3s;
 
 }
 
-.description img:hover{
+/* .description img:hover{
     width: 600px;
     height: 450px;
-}
+} */
 
 .enlarged{
     width: 600px;
@@ -258,17 +258,17 @@ li{
     }
 
     .description img{
-        width: 200px;
-        height: 200px;
+        width: 100%;
+        height: 30%;
     
         transition: all 0.3s;
     
     }
     
-    .description img:hover{
+    /* .description img:hover{
         width: 200px;
         height: 200px;
-    }
+    } */
 
     .headline h1{
         position: absolute;
