@@ -1,0 +1,10 @@
+.event-container{
+    border: solid 1px black;
+    padding: 7px;
+    border-radius: 10px;
+    margin-top: 7px;
+}
+
+.event-container span{
+    margin-top: -5px;
+}
