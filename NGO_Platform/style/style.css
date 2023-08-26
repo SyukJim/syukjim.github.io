@@ -1,0 +1,14 @@
+.card img{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card{
+    margin-top: 1%;
+}
+
+/* .col-left{
+    float: left;
+    width: 10%;
+} */
