@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JFF</title>
+</head>
+<body>
+
+    <style>
+        body{
+            background-color: #141a4b;
+        }
+
+        .container{
+            align-items: center;
+            margin: auto;
+            width: 50%;
+            border: 1px white solid;
+            border-radius: 5px;
+            padding: 10px;
+            color: #fff;
+        }
+    </style>
+
+    <div class="container">
+        <form id="myForm">
+            <p>Air keluar? <input type="checkbox" id="waterAvailable"></p>
+            
+            <br>
+    
+            <input type="submit" value="Submit">
+        </form>
+        <h3>Paparan</h3>
+        <p id="toBeChanged">paparan</p>
+    </div>
+
+    <script>
+        const form = document.getElementById("myForm")
+        const sentence = document.getElementById("toBeChanged")
+        const date = new Date()
+        let newContent = "content"
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting
+            const isWaterAvailable = form.elements.waterAvailable.checked;
+
+            if (isWaterAvailable)
+            {
+                newContent = "ada air."
+            }
+            else
+            {
+                newContent = "tiada air."
+            }
+
+
+            sentence.innerHTML = "Setakat " + date + " " + newContent;
+
+          });
+    </script>
+
+
+</body>
+</html>
