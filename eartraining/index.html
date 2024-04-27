@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ear Training</title>
+    <style>
+        /* CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #aaa;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .container{
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 5px 12px #ccc;
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ear Training - Identify Intervals</h1>
+        <p>Listen to the interval and select the correct answer:</p>
+        <audio id="audio" controls>
+            <source id="audio-source" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div id="answers">
+            <button onclick="checkAnswer('major_third')">Major Third</button>
+            <button onclick="checkAnswer('minor_third')">Minor Third</button>
+            <button onclick="checkAnswer('perfect_fifth')">Perfect Fifth</button>
+            <button onclick="checkAnswer('major_sixth')">Major Sixth</button>
+        </div>
+        <p id="result"></p>
+        <button onclick="reset()">Reset</button>
+    </div>
+
+    <script>
+        // Array of MP3 files
+        const mp3Files = [
+            "f_major_third.mp3",
+            "f_minor_third.mp3",
+            "f_perfect_fifth.mp3",
+            "f_major_sixth.mp3",
+            "d_major_third.mp3",
+            "d_minor_third.mp3",
+            "d_perfect_fifth.mp3",
+            "d_major_sixth.mp3"
+        ];
+
+        // JavaScript for functionality
+        function getRandomFile() {
+            const randomIndex = Math.floor(Math.random() * mp3Files.length);
+            return mp3Files[randomIndex];
+        }
+
+        function playRandomAudio() {
+            const audioElement = document.getElementById('audio');
+            const randomFile = getRandomFile();
+            document.getElementById('audio-source').src = randomFile;
+            audioElement.load();
+            audioElement.play();
+        }
+
+        function checkAnswer(selectedInterval) {
+            // Get the file name from the audio source
+            const audioSrc = document.getElementById('audio-source').src;
+            const fileName = audioSrc.substring(audioSrc.lastIndexOf('/') + 1);
+
+            // console.log(fileName);
+            
+            // Get the correct interval from the file name
+            const correctInterval = fileName.split('_');
+            selectedInterval = selectedInterval.split('_');
+
+            // do you what i am trying to fix?
+
+            const mergeStringQ = correctInterval[1] + correctInterval[2].replace('.mp3', '');
+            const mergeStringA = selectedInterval[0] + selectedInterval[1];
+
+            console.log(mergeStringQ);
+            console.log(mergeStringA);
+            
+            if (mergeStringA === mergeStringQ) {
+                document.getElementById('result').innerHTML = 'Correct! <br>It is ' + fileName + ' that is being played! <br> Goodjob!';
+            } else {
+                document.getElementById('result').textContent = 'Incorrect. Try again!';
+            }
+        }
+
+        function reset() {
+            playRandomAudio();
+            document.getElementById('result').textContent = ''; // Clear the result
+        }
+
+        // Play a random audio file when the page loads
+        window.onload = playRandomAudio;
+    </script>
+</body>
+</html>
