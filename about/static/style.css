@@ -1,5 +1,5 @@
 .offcanvas{
-    background-color: #d8ac73;
+    background-color: #555;
 }
 .custom-offcanvas {
     width: 800px;
@@ -12,18 +12,24 @@ hr.new2 {
     border-top: 1px dashed red;
   }
 body{
-    background-color: #ffd194;
+    background-color: #333;
+}
+
+.content {
+    color: white;
 }
 
 .accordion-body{
-    background-color: #f2e7c3;
+    background-color: #aaa;
+    color: black;
 }
 .accordion-button{
-    background-color: #f2e7c3;
+    background-color: #999;
+    border-end-start-radius: 10px;
 }
 .accordion-button:not(.collapsed){
     color: #000000;
-    background-color: #f3e2b0;
+    background-color: #777;
 }
 .accordion-button:not(.collapsed){
     border-color: #000000;
@@ -31,6 +37,10 @@ body{
 
 .page-container {
     position: relative;
+}
+
+hr{
+    background-color: white;
 }
 
 .circular-cutout {
@@ -51,14 +61,15 @@ body{
     height: auto;
 }
 
-.circular-cutout2{ 
+.circular-cutout2{
     align-items: center;
-    top: 50px; /* Adjust the top position as needed */
-    left: 200px; /* Adjust the left position as needed */
+    top: 0px; /* Adjust the top position as needed */
+    left: 0%; /* Adjust the left position as needed */
     width: 250px; /* Adjust the width of the circular cutout */
     height: 250px; /* Adjust the height of the circular cutout */
     border-radius: 50%; /* Make the cutout circular */
     overflow: hidden; /* Hide any content outside the circular cutout */
+    position: relative;
 }
 
 .circular-cutout2 img {
@@ -79,7 +90,7 @@ body{
     border-radius: 20px;
 }
 
-.pin-container {
+/* .pin-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,11 +140,8 @@ background-color: red;
 
 .unlock-text.show {
 opacity: 1;
-}
+} */
 
-.content {
-    display: none;
-  }
-  
-  
-  
+
+
+
