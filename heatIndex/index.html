@@ -1,0 +1,54 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Heat Index</title>
+
+        
+    </head>
+    <body>
+
+        <h1>Feels like Temperature Calculations (Gives wrong values) </h1>
+
+        <p>Enter the current weather conditions below:</p>
+
+        <p>Feels like temperature <span id="answer"></span></p>
+        <form action="#">
+            <label for="temperature">Enter Current Temperature (in celsius)</label>
+            <input type="text" name="temperature" id="temperature"> <br> <br>
+
+            <label for="humidity">Enter Current humidity</label>
+            <input type="text" name="humidity" id="humidity"> <br> <br>
+
+            <input type="submit" value="Submit" onclick="calculateFeelsLikeCelsius(event)">
+
+        </form>
+
+        <script>
+            // Function to calculate feels like temperature in Celsius
+            function calculateFeelsLikeCelsius(event) {
+                event.preventDefault(); // Prevent the form from submitting and page refresh
+
+                var temperature = parseFloat(document.getElementById("temperature").value);
+                var humidity = parseFloat(document.getElementById("humidity").value);
+
+                // Check if parsing was successful
+                if (isNaN(temperature) || isNaN(humidity)) {
+                    document.getElementById("answer").innerHTML = "Please enter valid values for temperature and humidity.";
+                    return;
+                }
+
+                var results = (-42.379 + (2.04921523 * temperature) + (10.14333127 * humidity)-(0.22475541 * temperature *humidity) - (0.00683783 * Math.pow(temperature, 2)) - (0.05481717 * Math.pow(humidity, 2)) + (0.00122874 * Math.pow(temperature, 2) * humidity) + (0.00085282 * temperature * Math.pow(humidity, 2)) - (0.00000199 * Math.pow(temperature, 2) * Math.pow(humidity, 2))).toFixed(2);
+
+                var toCelsius = ((results - 32) * (5 / 9)).toFixed(2);
+                document.getElementById("answer").innerHTML = toCelsius + " °C";
+            }
+
+            
+        </script>
+
+
+        
+    </body>
+    </html>
