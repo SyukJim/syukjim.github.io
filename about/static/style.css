@@ -74,7 +74,7 @@ hr{
 
 .circular-cutout2 img {
     position: relative;
-    top: -30%; /* Adjust the vertical position of the image within the cutout */
+    top: 0%; /* Adjust the vertical position of the image within the cutout */
     left: 0%; /* Adjust the horizontal position of the image within the cutout */
     width: 100%;
     height: auto;
