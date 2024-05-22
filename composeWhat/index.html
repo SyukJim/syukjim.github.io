@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compose What</title>
+
+    <script src="javascript/script.js"></script>
+
+    <style>
+        .container{
+            background-color: #ccc;
+            margin: auto;
+            top: 50%;
+            left: 50%;
+            width: 50%;
+            text-align: left;
+            position: absolute;
+            border-radius: 6px;
+            padding: 20px;
+            transform: translate(-50%, -50%);
+            border: 1px solid black;
+        }
+
+        h1{
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 6px;
+        }
+
+        body{
+            background-color: #333;
+        }
+    </style>
+</head>
+<body onload="setSentence()">
+
+    <div class="container">
+        <h1>Compose What?</h1>
+        
+        <p>Compose a theme:</p>
+        <ul>
+            <li id="musicForm">in what form</li>
+            <li id="tempo">at a what tempo, what time signature</li>
+            <li id="key">in the key of what?</li>
+            <li id="startingNote">starting with notes what?</li>
+        </ul>
+    </div>
+</body>
+</html>
