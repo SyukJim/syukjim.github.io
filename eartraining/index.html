@@ -26,12 +26,58 @@
             padding: 10px;
             border-radius: 10px;
             box-shadow: 10px 10px 5px 12px #ccc;
+        }
 
-            
+        /* styles.css */
+        .back-button-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .back-button {
+            background-color: #ccc;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .back-button:hover {
+            background-color: #666;
+            color: #ccc;
+        }
+
+        /* styles.css */
+        .back-button-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .back-button {
+            background-color: #ccc;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .back-button:hover {
+            background-color: #666;
+            color: #ccc;
         }
     </style>
 </head>
 <body>
+
+    <div class="back-button-container">
+        <button class="back-button" onclick="goBack()"><</button>
+    </div>
     <div class="container">
         <h1>Ear Training - Identify Intervals</h1>
         <p>Listen to the interval and select the correct answer:</p>
@@ -109,6 +155,13 @@
 
         // Play a random audio file when the page loads
         window.onload = playRandomAudio;
+    </script>
+
+    <script>
+        // scripts.js
+        function goBack() {
+            window.history.back();
+        }
     </script>
 </body>
 </html>

@@ -55,6 +55,28 @@
             font-size: 14px;
             color: white;
         }
+
+        /* styles.css */
+        .back-button-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .back-button {
+            background-color: #ccc;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .back-button:hover {
+            background-color: #666;
+            color: #ccc;
+        }
     </style>
 </head>
 <body>
@@ -85,6 +107,9 @@
         <div class="number" style="top: 10px; left: 145px;">12</div>
     </div>
 
+    <div class="back-button-container">
+        <button class="back-button" onclick="goBack()"><</button>
+    </div>
     <script>
         function updateClock() {
             var now = new Date();
@@ -110,6 +135,13 @@
         }
 
         setInterval(updateClock, 1000);  // Update the clock every second
+    </script>
+
+    <script>
+        // scripts.js
+        function goBack() {
+            window.history.back();
+        }
     </script>
 </body>
 </html>

@@ -31,9 +31,35 @@
         body{
             background-color: #333;
         }
+
+        /* styles.css */
+        .back-button-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .back-button {
+            background-color: #ccc;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .back-button:hover {
+            background-color: #666;
+            color: #ccc;
+        }
     </style>
 </head>
 <body onload="setSentence()">
+
+    <div class="back-button-container">
+        <button class="back-button" onclick="goBack()"><</button>
+    </div>
 
     <div class="container">
         <h1>Compose What?</h1>
