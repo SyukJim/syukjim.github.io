@@ -71,6 +71,7 @@
             font-size: 16px;
             cursor: pointer;
             border-radius: 5px;
+            text-decoration: none;
         }
 
         .back-button:hover {
@@ -108,8 +109,9 @@
     </div>
 
     <div class="back-button-container">
-        <button class="back-button" onclick="goBack()"><</button>
+        <a href="../" class="back-button"><</a>
     </div>
+
     <script>
         function updateClock() {
             var now = new Date();
@@ -135,13 +137,6 @@
         }
 
         setInterval(updateClock, 1000);  // Update the clock every second
-    </script>
-
-    <script>
-        // scripts.js
-        function goBack() {
-            window.history.back();
-        }
     </script>
 </body>
 </html>

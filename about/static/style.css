@@ -142,6 +142,24 @@ background-color: red;
 opacity: 1;
 } */
 
+.mynav {
+    background-color: #aaa;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    /*justify-content: space-between;*/
+}
 
+.mynav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
 
-
+.mynav a:hover {
+    background-color: #ddd;
+    color: black;
+}
